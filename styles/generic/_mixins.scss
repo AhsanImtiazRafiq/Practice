@@ -1,0 +1,37 @@
+@mixin disabled-button {
+  filter: grayscale(100%);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+@mixin custom-scroll {
+  //Scrollbar
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-button {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $santas-grey;
+    border-radius: 8px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $primary-brand-color;
+    border-radius: 8px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $primary-brand-color;
+  }
+}

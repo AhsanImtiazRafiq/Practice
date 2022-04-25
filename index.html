@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appsilon</title>
+    <link href="https://www.dafontfree.net/embed/c2Vnb2UtdWktc2VtaWJvbGQtcmVndWxhciZkYXRhLzQ2L3MvNjIxOTAvc2VndWlzYi50dGY" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar" id="sidebar">
+        <div class="hamburger--close"  onclick="hamburgerToggle()">
+        </div>
+        <a href="./index.html" class="logo">
+          <img src="assets/images/logo.svg" alt="Insurance Portal" />
+        </a>
+        <div class="profile">
+          <img
+            src="assets/images/profile.png"
+            alt="Profile picture"
+            class="profile--img"
+          />
+          <h3 class="profile--title">Hello ! Rusalba Ruiz</h3>
+          <p class="profile--message">Welcome Back To Your Insurance Portal</p>
+          <div class="profile__plan">
+            Your Plan :
+            <span class="profile__plan--value">Free</span>
+          </div>
+        </div>
+        <button class="btn btn-primary">
+          Create New Plan <i class="icon-plus"></i>
+        </button>
+
+        <ul class="navigation">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><i class="icon-dashboard"></i>Overview</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><i class="icon-policy"></i>Policy</a
+            >
+          </li>
+          <li class="navigation__item active">
+            <a href="#" class="navigation__link"
+              ><i class="icon-report"></i>Reports</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><i class="icon-company"></i>Company</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><i class="icon-account"></i>User Accounts</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><i class="icon-doc"></i>History</a
+            >
+          </li>
+        </ul>
+
+        <a href="#" class="logout"> <i class="icon-logout"></i>Logout </a>
+      </aside>
+      <main class="dashboard__main">
+        <header class="header">
+          <span class="hamburger" onclick="hamburgerToggle()">
+            <i class="icon-hamburger"></i>
+          </span>
+          <ul class="topNav">
+            <li class="topNav__item">
+              <a href="#" class="topNav--link">Overview</a>
+            </li>
+            <li class="topNav__item">
+              <a href="#" class="topNav--link">Policy</a>
+            </li>
+            <li class="topNav__item active">
+              <a href="#" class="topNav--link">Reports</a>
+            </li>
+          </ul>
+        </header>
+        <section class="dashboard__body">
+          <div class="container">
+            <div class="hero">
+              <div class="hero__details">
+                <h1 class="hero--title">20% Safe On Your First Account</h1>
+                <div class="hero__content">
+                  <span class="hero--code">NEWBIE20</span>
+                  <span class="hero--copy">Copy Code</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="block">
+                  <h2 class="block--price">
+                    1000
+                    <sup>$</sup>
+                  </h2>
+                  <p class="block--description">Total Value of Disbursement</p>
+                  <div class="block__progress">
+                    <div class="block__detail">
+                      <h5 class="block--heading">Policy</h5>
+                      <span class="block--rate"
+                        >400
+                        <sup>$</sup>
+                      </span>
+                    </div>
+                    <div class="block__progressBar">
+                      <span
+                        class="block__progressBar--progress"
+                        style="width: 40%"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="block__progress">
+                    <div class="block__detail">
+                      <h5 class="block--heading">Claim</h5>
+                      <span class="block--rate"
+                        >800
+                        <sup>$</sup>
+                      </span>
+                    </div>
+                    <div class="block__progressBar purple">
+                      <span
+                        class="block__progressBar--progress"
+                        style="width: 80%"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="block">
+                  <h2 class="block--price">
+                    2500
+                    <sup>$</sup>
+                  </h2>
+                  <p class="block--description">Total Value of Disbursement</p>
+                  <div class="block__progress">
+                    <div class="block__detail">
+                      <h5 class="block--heading">Policy</h5>
+                      <span class="block--rate"
+                        >1100
+                        <sup>$</sup>
+                      </span>
+                    </div>
+                    <div class="block__progressBar">
+                      <span
+                        class="block__progressBar--progress"
+                        style="width: 60%"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="block__progress">
+                    <div class="block__detail">
+                      <h5 class="block--heading">Claim</h5>
+                      <span class="block--rate"
+                        >1400
+                        <sup>$</sup>
+                      </span>
+                    </div>
+                    <div class="block__progressBar purple">
+                      <span
+                        class="block__progressBar--progress"
+                        style="width: 80%"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="block">
+                  <h2 class="block--price">
+                    2500
+                    <sup>$</sup>
+                  </h2>
+                  <p class="block--description">Total Value of Disbursement</p>
+                  <div class="block__progress">
+                    <div class="block__detail">
+                      <h5 class="block--heading">Policy</h5>
+                      <span class="block--rate"
+                        >1100
+                        <sup>$</sup>
+                      </span>
+                    </div>
+                    <div class="block__progressBar">
+                      <span
+                        class="block__progressBar--progress"
+                        style="width: 60%"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="block__progress">
+                    <div class="block__detail">
+                      <h5 class="block--heading">Claim</h5>
+                      <span class="block--rate"
+                        >1400
+                        <sup>$</sup>
+                      </span>
+                    </div>
+                    <div class="block__progressBar purple">
+                      <span
+                        class="block__progressBar--progress"
+                        style="width: 80%"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>

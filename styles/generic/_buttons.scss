@@ -1,0 +1,30 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-style: normal;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  background-color: transparent;
+  color: $primary-text-color;
+  border: 1px solid transparent;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 7px;
+  cursor: pointer;
+
+  &-primary {
+    border-color: $primary-brand-color;
+    background-color: $primary-brand-color;
+    color: $white;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $white;
+      color: $primary-brand-color;
+    }
+    &:disabled {
+      @include disabled-button;
+    }
+  }
+}

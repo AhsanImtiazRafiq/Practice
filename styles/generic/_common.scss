@@ -1,0 +1,40 @@
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-primary;
+  line-height: 1.35;
+  background-color: $body-bg;
+  color: $primary-text-color;
+}
+
+.hamburger {
+  cursor: pointer;
+  margin-right: 10px;
+  &--close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    width: 25px;
+    &:before,
+    &:after {
+      position: absolute;
+      left: 15px;
+      content: " ";
+      height: 24px;
+      width: 2px;
+      background-color: $mako;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  @media (min-width: $breakpoint-tablet) {
+    &,
+    &--close {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+//Breakpoints for media
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 992px;
+$breakpoint-desktop: 1200px;
+
+//Container
+$container-mobile: calc(100% - 40px);
+$container: 980px;
+
+//Custom Grid
+$grid-columns: 12;
+$gutter-width: 20px;
+
+$grid-breakpoints: (
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+);
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    max-width: (100% / ($grid-columns / $i));
+    width: (100% / ($grid-columns / $i));
+  }
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+  @media (max-width:#{$value - 1}) {
+    .d-none-#{$breakpoint} {
+      display: none;
+    }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-#{$breakpoint}-#{$i} {
+      width: 100%;
+    }
+  }
+
+  // MEDIA QUERY
+  @media only screen and (min-width: $value) {
+    // RESPONSIVE COLUMN CODE .....
+    @for $i from 1 through $grid-columns {
+      .col-#{$breakpoint}-#{$i} {
+        max-width: (100% / ($grid-columns / $i));
+      }
+    }
+  }
+}

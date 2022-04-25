@@ -1,0 +1,173 @@
+.dashboard {
+  display: flex;
+  max-height: 100vh;
+  overflow: hidden;
+  &__main {
+    width: 100%;
+  }
+  &__body {
+    overflow-y: auto;
+    max-height: calc(100vh - #{$header-height});
+    @include custom-scroll;
+    padding: 30px;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    &__main {
+      max-width: calc(100% - #{$sidebar-width});
+    }
+    &__body {
+      padding: 35px;
+    }
+  }
+}
+
+.hero {
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  padding-top: 70%;
+  background-size: contain;
+  margin-bottom: 30px;
+  background: $zircon url(../assets/images/banner-bg.png) no-repeat center
+    bottom;
+
+  &__details {
+    width: 100%;
+    padding: 20px;
+    max-width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $primary-text-color;
+  }
+  &--title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &__content {
+    font-size: 1.6rem;
+    padding-left: 20px;
+  }
+  &--code {
+    border: 1px dashed $mako;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+  &--copy {
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  @media (min-width: $breakpoint-mobile) {
+    padding-top: 30.79%;
+    background-size: cover;
+    &__details {
+      padding: 0;
+      bottom: 70px;
+      right: 70px;
+      left: unset;
+      top: unset;
+      transform: unset;
+      text-align: left;
+      max-width: 475px;
+    }
+    &--title {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+    }
+    &__content {
+      font-size: 2.2rem;
+      padding-left: 70px;
+    }
+    &--code {
+      padding: 6px 13px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.block {
+  padding: 7px 20px 20px;
+  background: $white;
+  color: $primary-text-color;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  sup {
+    display: inline-flex;
+    vertical-align: super;
+  }
+  &--price {
+    display: flex;
+    font-size: 4rem;
+    sup {
+      font-size: 2.6rem;
+      color: $primary-brand-color;
+    }
+  }
+  &--description,
+  &__heading {
+    font-size: 1.7rem;
+  }
+  &__progress {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  &__detail {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 5px;
+    line-height: 1;
+    margin-bottom: 8px;
+    sup {
+      font-size: 1.3rem;
+    }
+  }
+  &--rate {
+    font-size: 2.2rem;
+  }
+  &__progressBar {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #f2f2f2 0%, #f0f0f0 111.47%);
+    border-radius: 2px;
+    overflow: hidden;
+    width: 100%;
+    height: 5px;
+    &--progress {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(90deg, $shamrock 0%, #50edb8 111.47%);
+      height: 100%;
+      border-radius: 2px;
+      transition: 0.3s all ease-in-out;
+      height: 100%;
+    }
+    &.purple {
+      .block__progressBar--progress {
+        background: linear-gradient(90deg, $purple 0%, #a886e9 111.47%);
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-mobile) {
+    padding: 7px 25px 25px;
+    &--price {
+      font-size: 5.5rem;
+      sup {
+        font-size: 2.5rem;
+      }
+    }
+    &__progress {
+      margin-top: 40px;
+    }
+  }
+}

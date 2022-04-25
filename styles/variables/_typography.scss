@@ -1,0 +1,52 @@
+//Generated font
+$font-path: "../assets/fonts";
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("#{$font-path}/SegoeUI.eot");
+  src: url("#{$font-path}/SegoeUI.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/SegoeUI.woff2") format("woff2"),
+    url("#{$font-path}/SegoeUI.woff") format("woff"),
+    url("#{$font-path}/SegoeUI.ttf") format("truetype"),
+    url("#{$font-path}/SegoeUI.svg#SegoeUI") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('#{$font-path}/SegoeUI-Semibold.eot');
+    src: url('#{$font-path}/SegoeUI-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('#{$font-path}/SegoeUI-Semibold.woff2') format('woff2'),
+        url('#{$font-path}/SegoeUI-Semibold.woff') format('woff'),
+        url('#{$font-path}/SegoeUI-Semibold.ttf') format('truetype'),
+        url('#{$font-path}/SegoeUI-Semibold.svg#SegoeUI-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("#{$font-path}/SegoeUI-Bold.eot");
+  src: url("#{$font-path}/SegoeUI-Bold.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/SegoeUI-Bold.woff2") format("woff2"),
+    url("#{$font-path}/SegoeUI-Bold.woff") format("woff"),
+    url("#{$font-path}/SegoeUI-Bold.ttf") format("truetype"),
+    url("#{$font-path}/SegoeUI-Bold.svg#SegoeUI-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 10px;
+}
+
+//Font Family
+$font-family-primary: "Segoe UI" , sans-serif;
+
+//Font sizes, Use Rem for font size
+$font-size-primary: 1.6rem;
+$font-size-sm: 1.4rem;
